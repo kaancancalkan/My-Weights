@@ -1,231 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kaan Can Calkan Weights</title>
-
-  <!-- <audio autoplay loop>
-    <source src="Songs/Tevvez - ZEUS.mp3" type="audio/mpeg"> </audio> -->
-
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Lifting Status</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <h1>My Weight Lifting Status</h1>
-  <table class="rwd-table">
-    <tr>
-      <th>Move </th>
-      <th>Muscle Group</th>
-      <th>Date</th>
-      <th>Weights</th>
-      <th>Reps and Sets</th>
-    </tr>
-    <tr>
-      <td data-th="Move"> Incline Dumbell Press</td>
-      <td data-th="Muscle">Chest</td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg">35 kg dumbells </td>
-      <td data-th="Reps and Sets">8-10 reps 4 sets </td>
-    </tr>
-    <tr>
-      <td data-th="Move"> Bench Press PR </td>
-      <td data-th="Muscle">Chest</td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg"> 80 Kg without bar </td>
-      <td data-th="Reps and Sets">1 rep </td>
-    </tr>
-    <tr>
-      <td data-th="Move">Incline Dumbell Fly </td>
-      <td data-th="Muscle">Chest</td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg">17.5 kg dumbells </td>
-      <td data-th="Reps and Sets">12 reps 4 sets </td>
-    </tr>
-    <tr>
-      <td data-th="Move">Incline Bench Press</td>
-      <td data-th="Muscle">Chest</td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg">50 kg without bar </td>
-      <td data-th="Reps and Sets">8-10 reps 4 sets </td>
-    </tr>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">2025 September Weight Lifting Log</h1>
+            <p class="subtitle">Strength & Discipline</p>
+        </header>
 
-    <tr>
-      <td data-th="Move">Butterfly</td>
-      <td data-th="Muscle">Chest</td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg">55 kg</td>
-      <td data-th="Reps and Sets">8-10 reps 4 sets </td>
-    </tr>
-    <tr>
-      <td data-th="Move">Chest Press Machine</td>
-      <td data-th="Muscle">Chest</td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg">75 kg </td>
-      <td data-th="Reps and Sets">12 reps 4 sets </td>
-    </tr>
-    <tr>
-      <td data-th="Move">Lat Pulldown Wide </td>
-      <td data-th="Muscle"> Back</td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg">65 kg</td>
-      <td data-th="Reps and Sets">8-10 reps 4 sets </td>
-    </tr>
+        <div class="table-container">
+            <div class="quote-section">
+                <p class="quote-text">It is a shame for a man to grow old without seeing the beauty and strength of which his body is capable</p>
+                <p class="quote-author">— Socrates</p>
+            </div>
+            
+            <table class="workout-table" id="workoutTable">
+                <thead>
+                    <tr>
+                        <th>Exercise</th>
+                        <th>Muscle Group</th>
+                        <th>Weight</th>
+                        <th>Reps</th>
+                        <th>Sets</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Table rows will be dynamically generated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-    <tr>
-      <td data-th="Move">Lat Pulldown Narrow </td>
-      <td data-th="Muscle"> Back</td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg">60 kg</td>
-      <td data-th="Reps and Sets">8-10 reps 4 sets </td>
-    </tr>
+    <footer id="footer" class="footer">
+        <div class="footer-container">
+            <p>
+                © <span id="year"></span>
+                <a
+                    href="https://kaancancalkan.github.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="footer-link"
+                >
+                    Kaan Can Calkan
+                </a>. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
 
-    <tr>
-      <td data-th="Move">Seated Row </td>
-      <td data-th="Muscle"> Back</td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg">60 kg</td>
-      <td data-th="Reps and Sets">12 reps 4 sets </td>
-    </tr>
-
-    <tr>
-      <td data-th="Move"> Back Extension </td>
-      <td data-th="Muscle"> Back</td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg"> Body weight</td>
-      <td data-th="Reps and Sets">15 to 30  reps 4 sets </td>
-    </tr>
-    <tr>
-      <td data-th="Move"> Low Row </td>
-      <td data-th="Muscle"> Back</td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg"> 60 kg</td>
-      <td data-th="Reps and Sets">12 reps 4 sets </td>
-    </tr>
-
-    <tr>
-      <td data-th="Move">Military Press</td>
-      <td data-th="Muscle">Shoulder </td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg">40 kg</td>
-      <td data-th="Reps and Sets">12 reps 4 sets </td>
-    </tr>
-
-
-    <tr>
-      <td data-th="Move">Shoulder Dumbell Press</td>
-      <td data-th="Muscle">Shoulder </td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg">27.5 kg dumbells</td>
-      <td data-th="Reps and Sets">12 reps 4 sets </td>
-    </tr>
-
-     <!-- <tr>
-      <td data-th="Move">Shrug</td>
-      <td data-th="Muscle">Shoulder </td>
-      <td data-th="Date">05/2023</td>
-      <td data-th="Kg">27,5 kg dumbells</td>
-      <td data-th="Reps and Sets">12 reps 4 sets </td>
-    </tr> -->
-
-    <tr>
-      <td data-th="Move">Lateral Raise </td>
-      <td data-th="Muscle">Shoulder </td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg">10 kg dumbells</td>
-      <td data-th="Reps and Sets">15 reps 4 sets </td>
-    </tr>
-
-    <tr>
-      <td data-th="Move">Face Pull </td>
-      <td data-th="Muscle">Shoulder </td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg">55 kg</td>
-      <td data-th="Reps and Sets">12-15 reps 4 sets </td>
-    </tr>
-
-    <tr>
-      <td data-th="Move">Z Bar Curl </td>
-      <td data-th="Muscle">Biceps Arm </td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg">25 kg</td>
-      <td data-th="Reps and Sets">12-15 reps 4 sets </td>
-    </tr>
-    <tr>
-      <td data-th="Move">Dumbell Curl </td>
-      <td data-th="Muscle">Biceps Arm </td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg">15 kg dumbells</td>
-      <td data-th="Reps and Sets">12-15 reps 4 sets </td>
-    </tr>
-    <tr>
-      <td data-th="Move">Hammer Curl </td>
-      <td data-th="Muscle">Biceps Arm </td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg">15 kg dumbells</td>
-      <td data-th="Reps and Sets">12-15 reps 4 sets </td>
-    </tr>
-
-    <tr>
-      <td data-th="Move">Rope Pushdown</td>
-      <td data-th="Muscle">Triceps Arm </td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg">55 kg</td>
-      <td data-th="Reps and Sets">12-15 reps 4 sets </td>
-    </tr>
-    <tr>
-      <td data-th="Move">Skull Crusher </td>
-      <td data-th="Muscle">Triceps Arm </td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg">25 kg</td>
-      <td data-th="Reps and Sets">12-15 reps 4 sets </td>
-    </tr>
-    <tr>
-      <td data-th="Move">Overhead Dumbell Triceps Extension </td>
-      <td data-th="Muscle">Triceps Arm </td>
-      <td data-th="Date">02/2024</td>
-      <td data-th="Kg">20 kg dumbell</td>
-      <td data-th="Reps and Sets">12-15 reps 4 sets </td>
-    </tr>
-    <!-- <tr>
-      <td data-th="Move">Leg Extensions</td>
-      <td data-th="Muscle">Leg</td>
-      <td data-th="Date">09/2022</td>
-      <td data-th="Kg">60 kg </td>
-      <td data-th="Reps and Sets">12-15 reps 4 sets </td>
-    </tr>
-
-    <tr>
-      <td data-th="Move">Kalf Machine</td>
-      <td data-th="Muscle">Leg</td>
-      <td data-th="Date">09/2022</td>
-      <td data-th="Kg">45 kg witohut machine weight </td>
-      <td data-th="Reps and Sets">12-15 reps 4 sets </td>
-    </tr>
-
-    <tr>
-      <td data-th="Move">Leg Curl</td>
-      <td data-th="Muscle">Leg</td>
-      <td data-th="Date">09/2022</td>
-      <td data-th="Kg">57 kg </td>
-      <td data-th="Reps and Sets">12-15 reps 4 sets </td>
-    </tr> -->
-
-
-
-
-
-
-
-
-  </table>
-
-  <p> "It is a shame for a man to grow old without seeing the beauty and strength of which his body is capable".</p>
-  <p class="bold"> Socrates </p>
-
-
+    <script src="script.js"></script>
 </body>
-
 </html>
